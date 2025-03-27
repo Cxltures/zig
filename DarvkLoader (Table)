@@ -1,0 +1,25 @@
+getgenv().DarvkKey = ""
+
+getgenv().accessoryCollision = false  -- Renamed from canCollide
+getgenv().shoeCollision = false     -- Added separate shoe collision toggle
+getgenv().anchored = false
+getgenv().autoReload = false
+getgenv().enableRefresh = false
+getgenv().refreshKeybind = Enum.KeyCode.LeftAlt
+getgenv().autoReloadWaitTime = 20
+getgenv().Time = 1
+getgenv().combineAccessories = false
+getgenv().loadingMode = "ItemsLoader" -- Options: "OutfitLoader", "ItemsLoader", "CombineBoth"
+getgenv().targetPlayerUsername = "" -- Replace with the actual username
+getgenv().FaceID = "2409281591" -- Actual face ID, now as a number
+getgenv().Head = {} -- Accessories that go on the head or face
+getgenv().Torso = {"91943779181223"} -- Accessories that go on the torso
+getgenv().Waist = {"15591590671"} -- Anythng that goes on hips
+getgenv().R6Blacklist = {} -- Replace with actual layered clothing IDs, also works with all other accessory id's
+getgenv().Shoes = {"18295916264", "18295910875"} -- Put the id's of roblox shoes in here.
+getgenv().Headless = false -- Gives the player headless
+getgenv().showFaceWhenHeadless = false  -- Toggle for showing face when headless is enabled
+getgenv().showHats = true  -- Toggle to show/hide hats
+getgenv().showFace = true -- Hides your face
+getgenv().removeAllItems = true -- Global variable using getgenv to toggle removing all items
+getgenv().keepOriginalFace = true -- Keeps original face instead of replacing it with the faceId you chose
