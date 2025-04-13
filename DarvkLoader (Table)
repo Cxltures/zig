@@ -1,4 +1,4 @@
-getgenv().DarvkKey = ""
+getgenv().DarvkKey = ''
 
 getgenv().accessoryCollision = false  -- Renamed from canCollide
 getgenv().shoeCollision = false     -- Added separate shoe collision toggle
@@ -9,11 +9,11 @@ getgenv().refreshKeybind = Enum.KeyCode.LeftAlt
 getgenv().autoReloadWaitTime = 20
 getgenv().Time = 1
 getgenv().combineAccessories = true
-getgenv().loadingMode = 'ItemsLoader' -- Options: "OutfitLoader", "ItemsLoader", "CombineBoth"
-getgenv().targetPlayerUsername = '' -- Replace with the actual username
+getgenv().loadingMode = 'CombineBoth' -- Options: "OutfitLoader", "ItemsLoader", "CombineBoth"
+getgenv().targetPlayerUsername = 'Sperling33' -- Replace with the actual username
 getgenv().FaceID = '' -- Actual face ID, now as a number
 getgenv().Head = {} -- Accessories that go on the head or face
-getgenv().Shoulder = {}
+getgenv().Shoulder = {} -- Shoulder Accessories
 getgenv().Torso = {} -- Accessories that go on the torso
 getgenv().Waist = {} -- Anythng that goes on hips
 getgenv().R6Blacklist = {} -- Replace with actual layered clothing IDs, also works with all other accessory id's
@@ -24,3 +24,24 @@ getgenv().showHats = true  -- Toggle to show/hide hats
 getgenv().showFace = true -- Hides your face
 getgenv().removeAllItems = true -- Global variable using getgenv to toggle removing all items
 getgenv().keepOriginalFace = true -- Keeps original face instead of replacing it with the faceId you chose
+
+-- Scaling Configuration
+getgenv().autoScale = false -- Enable/disable auto-scaling
+getgenv().scaleMultiplier = 1 -- Global scale multiplier
+getgenv().accessoryCategories = {
+    Hat = 1.0,          -- Head accessories
+    Hair = 1.0,         -- Hair accessories
+    Face = 1.0,         -- Face accessories
+    Neck = 1.0,         -- Necklaces, scarves
+    Shoulder = 1.0,     -- Shoulder pads, epaulets
+    Front = 1.0,        -- Shirt fronts, ties
+    Back = 1.0,         -- Backpacks, wings
+    Waist = 1.0,        -- Belts, skirts
+    LeftShoe = 1.0,     -- Left shoes
+    RightShoe = 1.0,    -- Right shoes
+    LeftArm = 1.0,      -- Left arm accessories
+    RightArm = 1.0,     -- Right arm accessories
+    LeftLeg = 1.0,      -- Left leg accessories
+    RightLeg = 1.0,     -- Right leg accessories
+    Generic = 1.0       -- Default for unknown types
+}
