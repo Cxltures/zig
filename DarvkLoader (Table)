@@ -1,4 +1,4 @@
-getgenv().DarvkKey = ''
+getgenv().DarvkKey = ""
 
 getgenv().accessoryCollision = false  -- Renamed from canCollide
 getgenv().shoeCollision = false     -- Added separate shoe collision toggle
@@ -9,7 +9,7 @@ getgenv().refreshKeybind = Enum.KeyCode.LeftAlt
 getgenv().autoReloadWaitTime = 20
 getgenv().Time = 1
 getgenv().combineAccessories = true
-getgenv().loadingMode = 'ItemsLoader' -- Options: "OutfitLoader", "ItemsLoader", "CombineBoth"
+getgenv().loadingMode = 'CombineBoth' -- Options: "OutfitLoader", "ItemsLoader", "CombineBoth"
 getgenv().targetPlayerUsername = '' -- Replace with the actual username
 getgenv().FaceID = '' -- Actual face ID, now as a number
 getgenv().Head = {} -- Accessories that go on the head or face
@@ -25,28 +25,16 @@ getgenv().showFace = true -- Hides your face
 getgenv().removeAllItems = true -- Global variable using getgenv to toggle removing all items
 getgenv().keepOriginalFace = true -- Keeps original face instead of replacing it with the faceId you chose
 
-getgenv().scaleMode = 'Default'  -- Initialize scale mode first
-getgenv().scalePresets = {
-    ['Default'] = {
-        autoScale = false,
-        scaleMultiplier = 1,
-        accessoryCategories = {
-            Hat = 1.0, Hair = 1.0, Face = 1.0, Neck = 1.0,
-            Shoulder = 1.0, Front = 1.0, Back = 1.0, Waist = 1.0,
-            LeftShoe = 1.0, RightShoe = 1.0, LeftArm = 1.0, RightArm = 1.0,
-            LeftLeg = 1.0, RightLeg = 1.0, Generic = 1.0
-        }
-    },
-    ['Test'] = {
-        autoScale = false,
-        scaleMultiplier = 1,
-        accessoryCategories = {
-            Hat = 1.0, Hair = 1.0, Face = 1.0, Neck = 0.5,
-            Shoulder = 1.0, Front = 1.0, Back = 0.7, Waist = 1.0,
-            LeftShoe = 1.0, RightShoe = 1.0, LeftArm = 1.0, RightArm = 1.0,
-            LeftLeg = 1.0, RightLeg = 1.0, Generic = 1.0
-        }
-    }
-}
+-- New scale options
+getgenv().scaleEnabled = true -- Enable/disable scaling
+getgenv().headScale = 1.0 -- Scale for head accessories (Hat)
+getgenv().hairScale = 1.0 -- Scale for hair accessories
+getgenv().faceScale = 1.0 -- Scale for face accessories
+getgenv().shoulderScale = 1.0 -- Scale for shoulder accessories
+getgenv().frontScale = 1.0 -- Scale for front torso accessories
+getgenv().backScale = 1.0 -- Scale for back torso accessories
+getgenv().waistScale = 1.0 -- Scale for waist accessories
+getgenv().shoeScale = 1.0 -- Scale for shoes
+getgenv().neckScale = 1.0 -- Scale for neck accessories
 
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cxltures/zig/refs/heads/main/API%20(Unoptimized%20Encrypted)')))()
