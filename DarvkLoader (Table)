@@ -1,40 +1,80 @@
-getgenv().DarvkKey = ""
+getgenv().DarvkKey = ""  -- Darvk key needed to use the script.
 
-getgenv().accessoryCollision = false  -- Renamed from canCollide
-getgenv().shoeCollision = false     -- Added separate shoe collision toggle
-getgenv().anchored = false
-getgenv().autoReload = false
-getgenv().enableRefresh = false
-getgenv().refreshKeybind = Enum.KeyCode.LeftAlt
-getgenv().autoReloadWaitTime = 20
-getgenv().Time = 1
-getgenv().combineAccessories = true
-getgenv().loadingMode = 'CombineBoth' -- Options: "OutfitLoader", "ItemsLoader", "CombineBoth"
-getgenv().targetPlayerUsername = '' -- Replace with the actual username
-getgenv().FaceID = '' -- Actual face ID, now as a number
-getgenv().Head = {} -- Accessories that go on the head or face
-getgenv().Shoulder = {} -- Shoulder Accessories
-getgenv().Torso = {} -- Accessories that go on the torso
-getgenv().Waist = {} -- Anythng that goes on hips
-getgenv().R6Blacklist = {} -- Replace with actual layered clothing IDs, also works with all other accessory id's
-getgenv().Shoes = {} -- Put the id's of roblox shoes in here.
-getgenv().Headless = false -- Gives the player headless
-getgenv().showFaceWhenHeadless = false  -- Toggle for showing face when headless is enabled
-getgenv().showHats = true  -- Toggle to show/hide hats
-getgenv().showFace = true -- Hides your face
-getgenv().removeAllItems = true -- Global variable using getgenv to toggle removing all items
-getgenv().keepOriginalFace = true -- Keeps original face instead of replacing it with the faceId you chose
+getgenv().settings = {
+    collision = {
+        accessories = false,        -- Toggles collision for accessories
+        shoes = false,              -- Toggles collision for shoes
+        anchored = false            -- Whether accessories should be anchored
+    },
+    
+    automation = {
+        autoReload = {
+            enabled = false,        -- Auto-reloads accessories periodically
+            interval = 20           -- Wait time (in seconds) between reloads
+        },
+        refresh = {
+            enabled = false,        -- Allows refreshing with a keybind
+            keybind = Enum.KeyCode.LeftAlt, -- Key used to refresh
+            cooldown = 1            -- Optional cooldown for refreshing
+        }
+    },
 
--- New scale options
-getgenv().scaleEnabled = true -- Enable/disable scaling
-getgenv().headScale = 1.0 -- Scale for head accessories (Hat)
-getgenv().hairScale = 1.0 -- Scale for hair accessories
-getgenv().faceScale = 1.0 -- Scale for face accessories
-getgenv().shoulderScale = 1.0 -- Scale for shoulder accessories
-getgenv().frontScale = 1.0 -- Scale for front torso accessories
-getgenv().backScale = 1.0 -- Scale for back torso accessories
-getgenv().waistScale = 1.0 -- Scale for waist accessories
-getgenv().shoeScale = 1.0 -- Scale for shoes
-getgenv().neckScale = 1.0 -- Scale for neck accessories
+    loading = {
+        mode = "ItemsLoader",       -- "OutfitLoader", "ItemsLoader", "CombineBoth"
+        targetPlayer = "",-- Username to morph into (for OutfitLoader/CombineBoth)
+        removeAllItems = true,      -- Clears existing character items
+        combineAccessories = false   -- Adds accessories to existing outfit instead of replacing
+    },
+
+    accessories = {
+        head = {},
+        shoulder = {},
+        torso = {},
+        waist = {},
+        shoes = {}, -- Shoe asset IDs
+        r6Blacklist = {}
+    },
+
+    appearance = {
+        face = {
+            id = "",                -- Custom face ID
+            visible = true,         -- Whether face should be shown
+            keepOriginal = true     -- Retains original face even if one is set
+        },
+        headless = {
+            enabled = false,        -- Hides the head (Headless)
+            showFace = false        -- Show face even while headless
+        },
+        hats = {
+            visible = true          -- Toggle hat visibility
+        }
+    },
+
+    scaling = {
+        enabled = false,             -- Enables accessory scaling
+        head = 1.0,                 -- Head accessory scale
+        hair = 1.0,                 -- Hair accessory scale
+        face = 1.0,                 -- Face accessory scale
+        shoulder = 1.0,             -- Shoulder accessory scale
+        front = 1.0,                -- Front torso accessory scale
+        back = 1.0,                 -- Back torso accessory scale
+        waist = 1.0,                -- Waist accessory scale
+        shoe = 1.0,                 -- Shoe accessory scale
+        neck = 1.0                  -- Neck accessory scale
+    },
+
+    transparency = {
+        enabled = false,             -- Enables transparency control
+        head = 0.0,                   -- Head accessory transparency (0-1)
+        hair = 0.0,                   -- Hair accessory transparency (0-1)
+        face = 0.0,                   -- Face transparency (0-1)
+        shoulder = 0.0,              -- Shoulder accessory transparency (0-1)
+        front = 0.0,                  -- Front torso accessory transparency (0-1)
+        back = 0.0,                   -- Back torso accessory transparency (0-1)
+        waist = 0.0,                  -- Waist accessory transparency (0-1)
+        shoe = 0.0,                   -- Shoe transparency (0-1)
+        neck = 0.0                    -- Neck accessory transparency (0-1)
+    }
+}
 
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cxltures/zig/refs/heads/main/API%20(Unoptimized%20Encrypted)')))()
