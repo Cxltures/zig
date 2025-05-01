@@ -1,4 +1,4 @@
-getgenv().DarvkKey = ''  -- Auth key (kept separate for security)
+getgenv().DarvkKey = ""  -- Auth key (kept separate for security)
 
 getgenv().settings = {
     collision = {
@@ -20,35 +20,35 @@ getgenv().settings = {
     },
 
     loading = {
-        mode = 'ItemsLoader',       -- "OutfitLoader", "ItemsLoader", "CombineBoth"
-        targetPlayer = '',-- Username to morph into (for OutfitLoader/CombineBoth)
+        mode = "ItemsLoader",       -- "OutfitLoader", "ItemsLoader", "CombineBoth"
+        targetPlayer = "",-- Username to morph into (for OutfitLoader/CombineBoth)
         removeAllItems = true,      -- Clears existing character items
-        combineAccessories = false   -- Adds accessories to existing outfit instead of replacing
+        combineAccessories = true,  -- Adds accessories to existing outfit instead of replacing
+        preserveClassicClothing = false -- New toggle: Keeps classic Shirt and Pants when removing items
     },
-    
-        r6 = {
-        characterBlockyInR6 = false,
-        r6Blacklist = {} -- Incheck in-case the auto layer clothing detector doesn't work.
+
+    r6 = {
+        characterBlockyInR6 = false,  -- New toggle: Controls whether character becomes blocky in R6 when removing items
+        r6Blacklist = {}
     },
 
     accessories = {
-        head = {}, -- Example {'123123123123123"}
+        head = {},
         shoulder = {},
         torso = {},
         waist = {},
         shoes = {}, -- Shoe asset IDs
-        r6Blacklist = {}
     },
 
     appearance = {
         face = {
-            id = '',                -- Face ID create roblox asset id
+            id = "",                -- Custom face ID
             visible = true,         -- Whether face should be shown
             keepOriginal = true     -- Retains original face even if one is set
         },
         headless = {
             enabled = false,        -- Hides the head (Headless)
-            showFace = true        -- Show face even while headless
+            showFace = false        -- Show face even while headless
         },
         hats = {
             visible = true          -- Toggle hat visibility
@@ -60,17 +60,17 @@ getgenv().settings = {
         head = 1.0,                 -- Head accessory scale
         hair = 1.0,                 -- Hair accessory scale
         face = 1.0,                 -- Face accessory scale
-        shoulder = 0.6,             -- Shoulder accessory scale
+        shoulder = 1.0,             -- Shoulder accessory scale
         front = 1.0,                -- Front torso accessory scale
-        back = 0.6,                 -- Back torso accessory scale
+        back = 1.0,                 -- Back torso accessory scale
         waist = 1.0,                -- Waist accessory scale
         shoe = 1.0,                 -- Shoe accessory scale
-        neck = 0.5                  -- Neck accessory scale
+        neck = 1.0                  -- Neck accessory scale
     },
 
     transparency = {
         enabled = false,             -- Enables transparency control
-        head = 1.0,                   -- Head accessory transparency (0-1)
+        head = 0.0,                   -- Head accessory transparency (0-1)
         hair = 0.0,                   -- Hair accessory transparency (0-1)
         face = 0.0,                   -- Face transparency (0-1)
         shoulder = 0.0,              -- Shoulder accessory transparency (0-1)
@@ -81,3 +81,5 @@ getgenv().settings = {
         neck = 0.0                    -- Neck accessory transparency (0-1)
     }
 }
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cxltures/zig/refs/heads/main/API%20(Unoptimized%20Encrypted)')))()
