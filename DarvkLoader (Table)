@@ -52,6 +52,10 @@ getgenv().settings = {
         },
         hats = {
             visible = true          -- Toggle hat visibility
+        },
+        korblox = {
+            enabled = false,        -- Toggle for Korblox leg
+            rightLegOnly = true     -- Whether to only modify right leg
         }
     },
 
